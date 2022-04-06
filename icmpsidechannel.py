@@ -37,7 +37,7 @@ def extractmessage(dst:str, filename: str) -> str:
 def cmdparse(args: typing.Optional[typing.List[str]] = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description='simple script to hide a message in the length of an icmp packet')
-    parser.add_argument('--ip', required=True, 
+    parser.add_argument('--ip', 
             help='the IP address of the recipient of the message')
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument('--send', action='store_true',
